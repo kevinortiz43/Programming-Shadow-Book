@@ -1,0 +1,431 @@
+/* padding = add stuff around the   */
+* {
+  /* Apply to all four sides */
+  padding: 1em;
+
+  /* top and bottom | left and right */
+  padding: 5% 10%;
+
+  /* top | left and right | bottom */
+  padding: 1em 2em 2em;
+
+  /* top | right | bottom | left */
+  padding: 5px 1em 0 2em;
+
+  /* Global values */
+  padding: inherit;
+  padding: initial;
+  padding: revert;
+  padding: revert-layer;
+  padding: unset;
+
+  /* padding bottom, left, right, top */
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+
+/* background color */
+* {
+  /* Keyword values */
+  background-color: red;
+  background-color: indigo;
+
+  /* Hexadecimal value */
+  background-color: #bbff00; /* Fully opaque */
+  background-color: #bf0; /* Fully opaque shorthand */
+  background-color: #11ffee00; /* Fully transparent */
+  background-color: #1fe0; /* Fully transparent shorthand */
+  background-color: #11ffeeff; /* Fully opaque */
+  background-color: #1fef; /* Fully opaque shorthand */
+
+  /* RGB value */
+  background-color: rgb(255 255 128); /* Fully opaque */
+  background-color: rgb(117 190 218 / 50%); /* 50% transparent */
+
+  /* HSL value */
+  background-color: hsl(50 33% 25%); /* Fully opaque */
+  background-color: hsl(
+    50 33% 25% / 75%
+  ); /* 75% opaque, i.e. 25% transparent */
+
+  /* Special keyword values */
+  background-color: currentcolor;
+  background-color: transparent;
+
+  /* Global values */
+  background-color: inherit;
+  background-color: initial;
+  background-color: revert;
+  background-color: revert-layer;
+  background-color: unset;
+}
+
+/* font  */
+
+* {
+  @font-face {
+    font-family: "zantrokeregular";
+    src: url("fonts/zantroke-webfont.woff2") format("woff2"),
+      url("fonts/zantroke-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+/* color */
+
+* {
+  /* Keyword values */
+  color: currentcolor;
+
+  /* <named-color> values */
+  color: red;
+  color: orange;
+  color: tan;
+  color: rebeccapurple;
+
+  /* <hex-color> values */
+  color: #090;
+  color: #009900;
+  color: #090a;
+  color: #009900aa;
+
+  /* <rgb()> values and legacy <rgba()> values*/
+  color: rgb(34, 12, 64);
+  color: rgb(34, 12, 64, 0.6);
+  color: rgba(34, 12, 64, 0.6);
+  color: rgb(34 12 64 / 0.6);
+  color: rgba(34 12 64 / 0.6);
+  color: rgb(34.6 12 64 / 60%);
+  color: rgba(34.6 12 64 / 60%);
+
+  /* <hsl()> values and legacy <hsla()> values */
+  color: hsl(30, 100%, 50%);
+  color: hsl(30, 100%, 50%, 0.6);
+  color: hsla(30, 100%, 50%, 0.6);
+  color: hsl(30 100% 50% / 0.6);
+  color: hsla(30 100% 50% / 0.6);
+  color: hsl(30.2 100% 50% / 60%);
+  color: hsla(30.2 100% 50% / 60%);
+
+  /* <hwb()> values */
+  color: hwb(90 10% 10%);
+  color: hwb(90 10% 10% / 0.5);
+  color: hwb(90deg 10% 10%);
+  color: hwb(1.5708rad 60% 0%);
+  color: hwb(0.25turn 0% 40% / 50%);
+
+  /* Global values */
+  color: inherit;
+  color: initial;
+  color: revert;
+  color: revert-layer;
+  color: unset;
+}
+
+/* box shadow */
+* {
+  /* Keyword values */
+  box-shadow: none;
+
+  /* A color and two length values */
+  /* <color> | <length> | <length> */
+  box-shadow: red 60px -16px;
+
+  /* Three length values and a color */
+  /* <length> | <length> | <length> | <color> */
+  box-shadow: 10px 5px 5px black;
+
+  /* Four length values and a color */
+  /* <length> | <length> | <length> | <length> | <color> */
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+
+  /* inset, length values, and a color */
+  /* <inset> | <length> | <length> | <color> */
+  box-shadow: inset 5em 1em gold;
+
+  /* Any number of shadows, separated by commas */
+  box-shadow: 3px 3px red inset, -1em 0 0.4em olive;
+
+  /* Global values */
+  box-shadow: inherit;
+  box-shadow: initial;
+  box-shadow: revert;
+  box-shadow: revert-layer;
+  box-shadow: unset;
+}
+
+* {
+  /* The syntax of the first radius allows one to four values */
+  /* Radius is set for all 4 sides */
+  border-radius: 10px;
+
+  /* top-left-and-bottom-right | top-right-and-bottom-left */
+  border-radius: 10px 5%;
+
+  /* top-left | top-right-and-bottom-left | bottom-right */
+  border-radius: 2px 4px 2px;
+
+  /* top-left | top-right | bottom-right | bottom-left */
+  border-radius: 1px 0 3px 4px;
+
+  /* The syntax of the second radius allows one to four values */
+  /* (first radius values) / radius */
+  border-radius: 10px / 20px;
+
+  /* (first radius values) / top-left-and-bottom-right | top-right-and-bottom-left */
+  border-radius: 10px 5% / 20px 30px;
+
+  /* (first radius values) / top-left | top-right-and-bottom-left | bottom-right */
+  border-radius: 10px 5px 2em / 20px 25px 30%;
+
+  /* (first radius values) / top-left | top-right | bottom-right | bottom-left */
+  border-radius: 10px 5% / 20px 25em 30px 35em;
+
+  /* Global values */
+  border-radius: inherit;
+  border-radius: initial;
+  border-radius: revert;
+  border-radius: revert-layer;
+  border-radius: unset;
+}
+
+/* flex box */
+/* first start flex box */
+section {
+  display: flex;
+
+  /* select the direction */
+  flex-direction: column;
+
+  /* flex wrap */
+
+  flex-wrap: wrap;
+
+  /* flex short hand */
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  /* go with  */
+
+  flex-flow: row wrap;
+
+  /* proportion of each item */
+
+  flex: 1;
+
+  /* accessing the elements children or what is nested */
+
+  article:nth-of-type(3) {
+    flex: 2;
+  }
+
+  /* giving seperate items their available space in */
+
+  article {
+    flex: 1 100px;
+  }
+  /* this would give the third child its own space so it would look bigger than the other two in that flex box */
+  article:nth-of-type(3) {
+    flex: 2 100px;
+  }
+
+  /* align items  */
+
+  align-items: normal;
+  align-items: stretch;
+
+  /* Positional alignment */
+  /* align-items does not take left and right values */
+  align-items: center;
+  align-items: start;
+  align-items: end;
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: self-start;
+  align-items: self-end;
+  align-items: anchor-center;
+
+  /* Baseline alignment */
+  align-items: baseline;
+  align-items: first baseline;
+  align-items: last baseline;
+
+  /* Overflow alignment (for positional alignment only) */
+  align-items: safe center;
+  align-items: unsafe center;
+
+  /* Global values */
+  align-items: inherit;
+  align-items: initial;
+  align-items: revert;
+  align-items: revert-layer;
+  align-items: unset;
+
+  /* justify content */
+
+  /* Positional alignment */
+  justify-content: center;
+  justify-content: start;
+  justify-content: end;
+  justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: left;
+  justify-content: right;
+
+  /* Normal alignment */
+  justify-content: normal;
+
+  /* Distributed alignment */
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  justify-content: stretch;
+
+  /* Overflow alignment (for positional alignment only)*/
+  justify-content: safe center;
+  justify-content: unsafe center;
+
+  /* Global values */
+  justify-content: inherit;
+  justify-content: initial;
+  justify-content: revert;
+  justify-content: revert-layer;
+  justify-content: unset;
+
+  /* ordering the children in a flexbox */
+
+  button:first-child {
+    order: 1;
+  }
+}
+
+/* gap */
+* {
+  /* One <length> value */
+  gap: 20px;
+  gap: 1em;
+  gap: 3vmin;
+  gap: 0.5cm;
+
+  /* One <percentage> value */
+  gap: 16%;
+  gap: 100%;
+
+  /* Two <length> values */
+  gap: 20px 10px;
+  gap: 1em 0.5em;
+  gap: 3vmin 2vmax;
+  gap: 0.5cm 2mm;
+
+  /* One or two <percentage> values */
+  gap: 16% 100%;
+  gap: 21px 82%;
+
+  /* calc() values */
+  gap: calc(10% + 20px);
+  gap: calc(20px + 10%) calc(10% - 5px);
+
+  /* Global values */
+  gap: inherit;
+  gap: initial;
+  gap: revert;
+  gap: revert-layer;
+  gap: unset;
+}
+
+/* cursor */
+
+* {
+  /* Keyword value */
+  cursor: auto;
+  cursor: pointer;
+  /* … */
+  cursor: zoom-out;
+
+  /* URL with mandatory keyword fallback */
+  cursor: url(hand.cur), pointer;
+
+  /* URL and coordinates, with mandatory keyword fallback */
+  cursor: url(cursor_1.png) 4 12, auto;
+  cursor: url(cursor_2.png) 2 2, pointer;
+
+  /* URLs and fallback URLs (some with coordinates), with mandatory keyword fallback */
+  cursor: url(cursor_1.svg) 4 5, url(cursor_2.svg),
+    /* …, */ url(cursor_n.cur) 5 5, progress;
+
+  /* Global values */
+  cursor: inherit;
+  cursor: initial;
+  cursor: revert;
+  cursor: revert-layer;
+  cursor: unset;
+  /* more curosrs */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/cursor */
+}
+
+/* media queries */
+
+@media media-type and (media-feature-rule) {
+  /* CSS rules go here */
+}
+
+@media print {
+  body {
+    font-size: 12pt;
+  }
+}
+
+@media screen and (width: 600px) {
+  body {
+    color: red;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    color: blue;
+  }
+}
+
+/* if in orientation */
+
+@media (orientation: landscape) {
+  body {
+    color: rebeccapurple;
+  }
+}
+
+/* hover */
+
+@media screen and (hover: hover) {
+  body:hover {
+    color: white;
+    background: black;
+  }
+}
+
+/* in between widths */
+@media (30em <= width <= 50em) {
+  /* … */
+}
+
+/* and logic  */
+
+@media screen and (width >= 600px) and (orientation: landscape) {
+  body {
+    color: blue;
+  }
+}
+
+
+/* or logic */
+
+@media screen and (width >= 600px), screen and (orientation: landscape) {
+  body {
+    color: blue;
+  }
+}
