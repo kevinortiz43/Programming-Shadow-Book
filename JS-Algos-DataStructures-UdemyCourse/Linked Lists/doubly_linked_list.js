@@ -265,51 +265,51 @@ console.log("1a");
 newList.removeAt(0);
 newList.getList();
 
-// console.log("1b");
-// newList.insertFirst(100);
-// newList.getList();
+console.log("1b");
+newList.insertFirst(100);
+newList.getList();
 
-// console.log("2");
-// newList.insertLast(300);
-// newList.getList();
+console.log("2");
+newList.insertLast(300);
+newList.getList();
 
-// console.log("3");
-// newList.insertAt(200, 1);
-// newList.getList();
+console.log("3");
+newList.insertAt(200, 1);
+newList.getList();
 
-// console.log("4");
-// newList.insertLast(600);
-// newList.getList();
+console.log("4");
+newList.insertLast(600);
+newList.getList();
 
-// console.log("5");
-// newList.insertAt(400, 3);
-// newList.getList();
+console.log("5");
+newList.insertAt(400, 3);
+newList.getList();
 
-// console.log("6");
-// newList.insertAt(500, 4);
-// newList.getList();
+console.log("6");
+newList.insertAt(500, 4);
+newList.getList();
 
-// console.log("7");
-// newList.removeAt(5); // tail remove
-// newList.getList();
+console.log("7");
+newList.removeAt(5); // tail remove
+newList.getList();
 
-// console.log("8");
-// newList.removeAt(2);
-// newList.getList();
+console.log("8");
+newList.removeAt(2);
+newList.getList();
 
-// console.log("9");
-// newList.insertAt(50, 0); // head insert
-// newList.getList();
+console.log("9");
+newList.insertAt(50, 0); // head insert
+newList.getList();
 
-// console.log("10");
-// newList.removeAt(0); // head remove
-// newList.getList();
-
-
-// console.log("11");
-// newList.getAt(3);
+console.log("10");
+newList.removeAt(0); // head remove
+newList.getList();
 
 
-// console.log("9");
-// newList.insertAt(300, 2);
-// newList.getList();
+console.log("11");
+newList.getAt(3);
+
+
+console.log("9");
+newList.insertAt(300, 2);
+newList.getList();
