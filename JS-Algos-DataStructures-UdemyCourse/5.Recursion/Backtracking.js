@@ -54,10 +54,8 @@ function mazePathArr(row, col, proc = "") {
   return newArr;
   // return [...downPaths, ...rightPaths];
 }
-console.log('arr in body maze')
+console.log("arr in body maze");
 console.log(mazePathArr(3, 3));
-
-
 
 // Question 2c: return in array - all possible paths can reach finish point, if can move only down or right?
 // array in PARAMETER
@@ -87,27 +85,25 @@ const unique = Array.from(new Set(paths));
 console.log("Unique paths:");
 console.log(unique);
 
-
-// Question 3: return in arr - all possible paths can reach finishD point, if can move only down, right, AND diagonally?
+// Question 3: return in arr - all possible paths can reach finishD point, if can move only down, right, AND diagonally
 // array in BODY
 
 function mazePathArrDiag(row, col, proc = "") {
-
- const newArr = []   
+  const newArr = [];
 
   // base case: reached bottom-right corner
   if (row === 1 && col === 1) {
     return [proc];
   }
 
-// move diagonally
+  // move diagonally
   if (row > 1 && col > 1) {
-    newArr.push(...mazePathArrDiag(row - 1, col-1, proc + "D"));
+    newArr.push(...mazePathArrDiag(row - 1, col - 1, proc + "D")); // just have to make sure r-1 and c-1
   }
 
   // move vertical
   if (row > 1) {
-     newArr.push(...mazePathArrDiag(row - 1, col, proc + "V"));
+    newArr.push(...mazePathArrDiag(row - 1, col, proc + "V"));
   }
 
   // move horizontal
@@ -117,5 +113,42 @@ function mazePathArrDiag(row, col, proc = "") {
   return newArr;
 }
 
-console.log('added diagonal path option')
+console.log("added diagonal path option");
 console.log(mazePathArrDiag(3, 3));
+
+// Question 4: maze with OBSTACLES. Return in arr - all possible paths can reach finishD point, if can move only down, right, AND diagonally
+// array in BODY
+
+
+function mazeObstacles1(row, col, maze, proc = "") {
+  const newArr = [];
+
+  // base case: reached bottom-right corner
+  if (row === maze.length - 1 && col === maze[0].length - 1) {
+    return [proc];
+  }
+
+  if (!maze[row][col]) {
+    // if not false (i.e. true) then stop recursion
+    return []; // need to tell JS return an array (unlike with TS or Java where can determine type ahead of time)
+  }
+
+  // move vertical
+  if (row < maze.length - 1) {
+    newArr.push(...mazeObstacles1(row + 1, col, maze, proc + "D"));
+  }
+
+  // move horizontal
+  if (col < maze[0].length - 1) {
+    newArr.push(...mazeObstacles1(row, col + 1, maze, proc + "R"));
+  }
+  return newArr;
+}
+
+const board = [
+  [true, true, true],
+  [true, false, true],
+  [true, true, true],
+];
+
+console.log(mazeObstacles1(0, 0, board)); // Start at (0, 0) instead of (3, 3)
