@@ -1,0 +1,14 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    develop:
+      watch:
+        - action: rebuild
+          path: .
+          target: /app
+          ignore:
+            - node_modules/
