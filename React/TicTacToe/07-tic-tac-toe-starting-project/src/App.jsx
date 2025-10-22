@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import GameBoard from "./components/Gameboard.tsx";
 import Player from "./components/Player.tsx";
-import Log from "./components/Log.tsx";
+// import Log from "./components/Log.tsx";
 
 // {/* even though we have component Player for both, these are 2 separate instances, so Player 1 instance will be DIFFERENt than Player 2 instance */}
 
