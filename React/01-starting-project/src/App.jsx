@@ -4,7 +4,7 @@ import { CORE_CONCEPTS } from './data.js';
 import Header from './components/Header/Header.jsx';
 import CoreConcept from './components/CoreConcept.jsx';
 import TabButton from './components/TabButton.jsx';
-import { EXAMPLES } from './data.js';
+import { data } from './data.js';
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -22,10 +22,10 @@ function App() {
   if (selectedTopic) {
     tabContent = (
       <div id="tab-content">
-        <h3>{EXAMPLES[selectedTopic].title}</h3>
-        <p>{EXAMPLES[selectedTopic].description}</p>
+        <h3>{data[selectedTopic].title}</h3>
+        <p>{data[selectedTopic].description}</p>
         <pre>
-          <code>{EXAMPLES[selectedTopic].code}</code>
+          <code>{data[selectedTopic].code}</code>
         </pre>
       </div>
     );
