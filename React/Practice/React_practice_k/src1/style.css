@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+.container {
+  padding: 0 2.5%;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(240, 244, 249);
+  color: black;
+  border-width: 0.5px;
+}
+
+.app {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.reset {
+  margin-top: 15px;
+  background-color: rgb(15, 49, 129);
+  border-radius: 5px;
+  color: white;
+  padding: 7px 14px;
+  border-width: 0.5px;
+}
