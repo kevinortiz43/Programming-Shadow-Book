@@ -1,5 +1,4 @@
-http
-  .request(options, function (response) {
+http.request(options, function (response) {
     let buffer = "";
     // ...
     response.on("data", function (chunk) {
