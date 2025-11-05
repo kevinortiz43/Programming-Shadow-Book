@@ -9,7 +9,7 @@ const app = express();
 const port = 3000;
 var bandName = "";
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 function bandNameGenerator(req, res, next) {
   console.log(req.body);
