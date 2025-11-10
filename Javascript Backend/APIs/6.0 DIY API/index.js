@@ -1,8 +1,15 @@
 import express from "express";
+import dotenv from "dotenv";
 // import bodyParser from "body-parser";
+
+
+
 
 const app = express();
 const port = 3000;
+dotenv.config();
+const mk = process.env.masterKey;
+
 
 app.use(express.urlencoded({ extended: true }));
 // app.use(express.json());
