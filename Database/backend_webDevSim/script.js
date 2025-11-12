@@ -3,9 +3,9 @@
 // https://youtu.be/DZBGEVgL2eE?si=NOroFKGeBRwy1R66&t=1255
 
 import dotenv from "dotenv";
-import express from "express";
+
 import { connectDb } from "./db.js";
-import User from "./User.js";
+
 
 dotenv.config(); // process.env
 // const PORT = process.env.PORT || 5001;
