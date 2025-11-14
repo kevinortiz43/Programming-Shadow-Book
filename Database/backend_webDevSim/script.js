@@ -5,6 +5,7 @@
 import dotenv from "dotenv";
 
 import { connectDb } from "./db.js";
+import User from "./User.js"
 
 
 dotenv.config(); // process.env
@@ -55,7 +56,7 @@ dotenv.config(); // process.env
 //various methods by user id
 run3: async () => {
   try{
-    // const user3 = await User.findById("....."); // OPTION 1
+    const user3 = await User.findById("....."); // OPTION 1
     // const user3 = await User.find( {name: "Kyle"}); // OPTION 2
     // const user3 = await User.findOne( {name: "Kyle"}); // OPTION 3
     // const user3 = await User.exists( {name: "Kyle"}); // OPTION 4
